@@ -8,9 +8,9 @@
  1. [Install Brass Monkey](http://playbrassmonkey.com/getapp), the controller app.
 
  2. Run
-```bash
-cd example/basic
-python -m SimpleHTTPServer
-```
+
+        cd example/basic
+        python -m SimpleHTTPServer
+
 
  3. Then open up [http://localhost:8000/](http:localhost:8000/)
