@@ -15,5 +15,5 @@
 
  3. Then open up [http://localhost:8000/](http:localhost:8000/)
  4. Open up Brass Monkey with your phone/tablet on the same network
- 5. Select the demo app from Brass Monkey
+ 5. Select the demo app from Brass Monkey hosts list.
  6. You should now be connect
