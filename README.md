@@ -5,7 +5,12 @@
 
 # Running the example
 
-    cd example/basic
-    python -m SimpleHTTPServer
+ 1. [Install Brass Monkey](http://playbrassmonkey.com/getapp), the controller app.
 
-Then open up [http://localhost:8000/](http:localhost:8000/)
+ 2. Run
+```bash
+cd example/basic
+python -m SimpleHTTPServer
+```
+
+ 3. Then open up [http://localhost:8000/](http:localhost:8000/)
