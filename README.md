@@ -8,4 +8,4 @@
     cd example/basic
     python -m SimpleHTTPServer
 
-Then open up [http://localhost:8080/](http:localhost:8080/)
+Then open up [http://localhost:8000/](http:localhost:8000/)
