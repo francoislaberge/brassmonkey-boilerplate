@@ -2,8 +2,11 @@
 
     git clone git@github.com:francoislaberge/brassmonkey-boilerplate.git
     cd brassmonkey-boilerplate
+# Live Demo
 
-# Running the example
+Go to the [demo page](http://francoislaberge.com/brassmonkey-boilerplate/examples/basic/) then follow steps 1, 4, 5, and 6.
+
+# Running the example locally
 
  1. [Install Brass Monkey](http://playbrassmonkey.com/getapp)
 
