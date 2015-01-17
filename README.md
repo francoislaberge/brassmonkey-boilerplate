@@ -14,9 +14,9 @@ This allows you build web experiences that are controlled by a mobile device in 
 
 
 1. Run
-
+```bash
       ./bin/run.sh
-
+```
 2. Then open up [http://localhost:8080/](http:localhost:8080/)
 
 # Contributing / Deploying
@@ -27,7 +27,9 @@ You'll need to have push writes to the repo.
 2. We use a workflow that allows this repo to be pushed to gh-pages for easy hosting via
 Github Pages. To deploy run:
 
-      ./bin/deploy.sh
+```bash
+./bin/deploy.sh
+```
 
 3. That moves everything onto gh-pages and push that branch and then returns to master.
 To verify it worked, open up the Github page of your repo and check if your changes are live.
