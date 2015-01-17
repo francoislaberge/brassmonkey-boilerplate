@@ -11,7 +11,7 @@
       var timestamp = new Date().getTime();
       var secondscreenHost = window.secondscreenHost.noConflict();
       var config = {
-        name: "SecondScreen HTML Example: Basic",
+        name: "Example",
         maxPlayers: 10,
         registryUrl: "ws://registry.monkeysecurity.com:6262/live",
         appId: "a65971f24694b9c47a9bcd01",
@@ -21,7 +21,7 @@
           major: 0,
           minor: 0
         },
-        controlsUrl: "scheme/basic-scheme.html?" + timestamp,
+        controlsUrl: "controller/controller.html?" + timestamp,
         controlMode: secondscreenHost.ControlModes.HTML,
         error: function(error) {
           secondscreenHost.log.error('Registry connection error: ' + error);
@@ -30,10 +30,10 @@
           secondscreenHost.log.info('Registry connected.');
         }
       };
-      
+
       secondscreenHost.setLogLevel(secondscreenHost.LogLevels.INFO);
       secondscreenHost.start(config);
-      
+
       secondscreenHost.on(secondscreenHost.EventTypes.SHOW_SLOT_COLOR, function(e) {
         var slot = document.getElementById('slot');
         slot.style.background = e.color;
@@ -64,7 +64,7 @@
 
         var log = 'Event.Message: ' +
                   '(' + message + ') ' +
-                  '| From ' + deviceId + ' | ' + 
+                  '| From ' + deviceId + ' | ' +
                   JSON.stringify(state,null,2);
 
         var p = document.createElement('p');
