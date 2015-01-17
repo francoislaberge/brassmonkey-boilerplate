@@ -2,9 +2,8 @@
 Use this repo as a starting point for building Red5Pro Secondscreen experiences.
 This allows you build web experiences that are controlled by a mobile device in real-time.
 
-Checkout the [Live Demo](http://francoislaberge.com/red5pro-secondscreen-boilerplate/).
-
-Check out the [Documentation of the Red5Pro Secondscreen HTML5 SDK](http://red5pro.com/docs/secondscreen/html5/) more details.
+  - [Live Demo](http://francoislaberge.com/red5pro-secondscreen-boilerplate/).
+  - [Documentation of the Red5Pro Secondscreen HTML5 SDK](http://red5pro.com/docs/secondscreen/html5/) more details.
 
 # Setup
 
