@@ -13,14 +13,17 @@
           y: 0
         },
         el: document.getElementById('mario'),
+        shadowEl: document.getElementById('mario-shadow'),
 
         // Actions
         jump: function (){
           // Ignore if we're already jumping or falling
+          /*
           if( mario.state === 'jumping' ) {
             return;
           }
-          mario.velocity.y = jumpImpulse;
+          */
+          mario.velocity.y += jumpImpulse;
           mario.state = 'jumping';
         }
       };
@@ -57,6 +60,9 @@
 
       mario.state = 'standing';
 
+      // Snap to ground
+      mario.position.y = 0;
+
       // Clear all velocity
       mario.velocity.x = 0;
       mario.velocity.y = 0;
@@ -64,6 +70,11 @@
 
     // Update the mario element to match mario's position
     mario.el.style.top = '-' + Math.floor(mario.position.y) + 'px';
+
+    // Update the shadow too
+    var coefficient = Math.max(0.0, Math.min(1.0, 1.0-mario.position.y/50))*0.2;
+    mario.shadowEl.style.opacity = coefficient;
+    mario.shadowEl.style.width = Math.floor((1-coefficient)*16 + 44) + 'px';
   }, 1000/60)
 
 
