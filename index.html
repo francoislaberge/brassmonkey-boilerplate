@@ -1,85 +1,31 @@
 <!doctype html>
 <html>
-  <head>
-    <meta http-equiv="cache-control" content="no-cache">
-    <link rel="stylesheet" type="text/css" href="style/main.css">
-    <script src="lib/host/secondscreen-host.min.js"></script>
-  </head>
-  <body>
-    <script>
-    (function(window) {
-      var timestamp = new Date().getTime();
-      var secondscreenHost = window.secondscreenHost.noConflict();
-      var config = {
-        name: "Example",
-        maxPlayers: 10,
-        registryUrl: "ws://registry.monkeysecurity.com:6262/live",
-        appId: "a65971f24694b9c47a9bcd01",
-        swfobjectUrl: 'lib/host/swf/swfobject.js',
-        swfUrl: "lib/host/swf/secondscreenHost.swf",
-        minimumVersion: {
-          major: 0,
-          minor: 0
-        },
-        controlsUrl: "controller/controller.html?" + timestamp,
-        controlMode: secondscreenHost.ControlModes.HTML,
-        error: function(error) {
-          secondscreenHost.log.error('Registry connection error: ' + error);
-        },
-        success: function() {
-          secondscreenHost.log.info('Registry connected.');
-        }
-      };
+<head>
+  <title>Boilerplate</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      secondscreenHost.setLogLevel(secondscreenHost.LogLevels.INFO);
-      secondscreenHost.start(config);
-
-      secondscreenHost.on(secondscreenHost.EventTypes.SHOW_SLOT_COLOR, function(e) {
-        var slot = document.getElementById('slot');
-        slot.style.background = e.color;
-      });
-
-      secondscreenHost.on(secondscreenHost.EventTypes.DEVICE_CONNECTED, function (e){
-        secondscreenHost.log.info("device connected " + e);
-      });
-
-      secondscreenHost.on(secondscreenHost.EventTypes.DEVICE_DISCONNECTED, function (e){
-        secondscreenHost.log.info("device disconnected " + e);
-      });
-
-      secondscreenHost.on(secondscreenHost.EventTypes.CONTROLS_URL_CHANGE, function(e) {
-        // Not sure when this is called
-      });
-
-      secondscreenHost.on(secondscreenHost.EventTypes.MESSAGE, function(e) {
-        var deviceId = e.device.id,
-            message = e.message,
-            state = e.state;
-
-        if(message === 'ready') {
-          e.device.sendMessageToControls("test");
-        }
-
-        var log = 'Event.Message: ' +
-                  '(' + message + ') ' +
-                  '| From ' + deviceId + ' | ' +
-                  JSON.stringify(state,null,2);
-
-        var p = document.createElement('p');
-        var text = document.createTextNode(log);
-        p.appendChild(text);
-        document.body.appendChild(p);
-        console.log(log)
-      });
-
-      window.notifyClient = function(message) {
-        secondscreenHost.allDevices().sendMessageToControls("state", encodeURIComponent(JSON.stringify({state:'host-available', message:message})));
-      };
-    }(window));
-  </script>
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
 <body>
-  <div id="slot"></div>
-  <button id="btn" onclick="window.notifyClient('hello, world!');">click me</button>
+  <div id="container">
+
+    <div id="world">
+      <img id="mario" src="images/mario.png"/>
+    </div>
+
+    <button id="button">Click Me</button>
+
+    <ol id="instructions">
+      <li>Install the <a href="http://playbrassmonkey.com/">Brass Monkey</a> app. ( iOS / Android )</li>
+      <li>Open up Brass Monkey with your phone/tablet on the same network.</li>
+      <li>Select <strong>Boilerplate</strong> <span id="slot"></span> from the list.</li>
+      <li>Now you should be connect.</li>
+      <li>Press the button to make mario jump.</li>
+    </ol>
+  </div>
+
+  <script src="scripts/red5pro/secondscreen-host.min.js"></script>
+  <script src="scripts/mario.js"></script>
+  <script src="scripts/app.js"></script>
 </body>
 </html>

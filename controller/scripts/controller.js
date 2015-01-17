@@ -31,17 +31,15 @@
       addButton({
         id: 'push-button',
         name: '',
-        eventName: 'push',
+        eventName: 'jump',
         upClass: 'push-button-state-up',
         downClass: 'push-button-state-down'
       });
-      
-      bridge.on('push', function(event) {
-        secondscreenClient.send('push', {
-          id: event.data.id
-        }, 'foo');
+
+      bridge.on('jump', function(event) {
+        secondscreenClient.send('jump');
       });
-      
+
       secondscreenClient.on('test', function(data) {
         appendMessage('received test: ' + data + '.');
       });
