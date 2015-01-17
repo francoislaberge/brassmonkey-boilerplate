@@ -1,3 +1,4 @@
+#!/bin/bash
 echo
 echo "Press Ctrl-C to quit..."
 echo
