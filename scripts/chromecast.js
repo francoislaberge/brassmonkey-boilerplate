@@ -1,6 +1,6 @@
 (function(){
 var applicationID = 'CFB2F279';
-var namespace = 'urn:x-cast:com.google.cast.sample.helloworld';
+var namespace = 'urn:x-cast:com.francoislaberge.red5pro.secondscreen.boilerplate';
 var session = null;
 
 /**
