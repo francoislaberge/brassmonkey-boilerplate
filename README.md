@@ -15,7 +15,7 @@ This allows you build web experiences that are controlled by a mobile device in 
 
 1. Run
 ```bash
-      ./bin/run.sh
+./bin/run.sh
 ```
 2. Then open up [http://localhost:8080/](http:localhost:8080/)
 
