@@ -83,11 +83,13 @@
     // when it's finish initializing. This makes for cleaner logic for when a
     // controller might want to do some asynchronous loading/logic before officially
     // starting to communicate with the host app
+    // TODO: This comment may be in correct. I can't find a custom 'ready' function in the
+    // original sample I based this on.
     if(e.message === 'ready') {
       // Example use case, now send some initial state that you might want synchronized
     }
-    // The controller sends a 'push' message when the big red button is pressed
-    else if(e.message === 'push') {
+    // The controller sends a 'jump' message when the big red button is pressed
+    else if(e.message === 'jump') {
       mario.jump();
     }
   });
