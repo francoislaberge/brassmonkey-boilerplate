@@ -1,10 +1,11 @@
 # Setup
 
-git clone git@github.com:francoislaberge/brassmonkey-boilerplate.git
-cd brassmonkey-boilerplate
+    git clone git@github.com:francoislaberge/brassmonkey-boilerplate.git
+    cd brassmonkey-boilerplate
+
 # Live Demo
 
-Go to the [demo page](http://francoislaberge.com/brassmonkey-boilerplate/examples/basic/) then follow steps 1, 4, 5, and 6 from the [instructions below](#running-the-example-locally).
+Go to the [demo page](http://francoislaberge.com/brassmonkey-boilerplate/) then follow steps 1, 4, 5, and 6 from the [instructions below](#running-the-example-locally).
 
 # Running the example locally
 
