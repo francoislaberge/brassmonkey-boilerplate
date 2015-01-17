@@ -34,3 +34,8 @@ Github Pages. To deploy run:
 3. That moves everything onto gh-pages and push that branch and then returns to master.
 To verify it worked, open up the Github page of your repo and check if your changes are live.
 In original repo case it's located at: http://francoislaberge.com/red5pro-secondscreen-boilerplate/
+
+# Chromecast Integration
+You should be able to run the original .
+
+TODO: Actually make a generic receiver. That'd be cooler. We'll see, might have to be public.
