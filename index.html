@@ -48,7 +48,7 @@
       });
 
       secondscreenHost.on(secondscreenHost.EventTypes.CONTROLS_URL_CHANGE, function(e) {
-        console.log('Controls url will change: ' + e.url);
+        // Not sure when this is called
       });
 
       secondscreenHost.on(secondscreenHost.EventTypes.MESSAGE, function(e) {
@@ -58,8 +58,6 @@
 
         if(message === 'ready') {
           e.device.sendMessageToControls("test");
-          e.device.sendMessageToControls("testing", 1, 2, 3);
-          e.device.sendMessageToControls("testing", 1.126, "52 skidoo", [1, 2, 3]);
         }
 
         var log = 'Event.Message: ' +
