@@ -1,5 +1,5 @@
 (function(){
-var applicationID = 'CFB2F279';
+var applicationID = '17204CC8';
 var namespace = 'urn:x-cast:com.francoislaberge.red5pro.secondscreen.boilerplate';
 var session = null;
 
