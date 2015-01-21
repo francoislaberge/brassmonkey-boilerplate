@@ -34,5 +34,4 @@ Github Pages. To deploy run:
 3. That moves everything onto gh-pages and push that branch and then returns to master.
 To verify it worked, open up the Github page of your repo and check if your changes are live.
 In original repo case it's located at: 
-
 http://francoislaberge.com/red5pro-secondscreen-boilerplate/
